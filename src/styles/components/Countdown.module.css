@@ -49,8 +49,25 @@
    font-weight: 600;
    transition: background 0.2s;
    cursor: pointer;
+   outline: none;
 }
 
-.countDownButton:hover {
+.countDownButton:disabled {
+   background: var(--white);
+   color: var(--text);
+   cursor: not-allowed;
+}
+
+.countDownButton:not(:disabled):hover {
    background: var(--blue-dark);
+}
+
+.countDownButtonActive {
+   background: var(--white);
+   color: var(--title);
+}
+
+.countDownButtonActive:not(:disabled):hover {
+   background: var(--red);
+   color: var(--white);
 }
